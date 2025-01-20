@@ -1,0 +1,354 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: #f8f9fa;
+    color: #212529;
+    line-height: 1.6;
+}
+
+
+
+.section {
+    padding: 5rem 2rem;
+    transition: all 0.6s ease-in-out;
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    color: #343a40;
+    text-align: center;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: #495057;
+    margin: 1rem auto 0;
+    border-radius: 2px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.service-card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.4s, box-shadow 0.4s;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    transition: transform 0.4s;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card:hover img {
+    transform: scale(1.1);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: #212529;
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: #6c757d;
+    font-size: 1rem;
+    text-align: justify; /* Esto centrará el texto */
+}
+
+
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+.contact-info li {
+    margin: 1rem 0;
+}
+
+.contact-info a {
+    color: #495057;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.contact-info a:hover {
+    color: #343a40;
+    text-decoration: underline;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;  /* Aumentado para mejor visibilidad */
+    height: 50px;  /* Aumentado para mejor visibilidad */
+    background-color: #495057;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-icons a:hover {
+    background-color: #343a40;
+    transform: scale(1.2);  /* Aumentar el tamaño al pasar el ratón */
+}
+
+.social-icons a img {
+    width: 95%;  /* Ajusta este valor según tus necesidades */
+    height: 95%;  /* Ajusta este valor según tus necesidades */
+    border-radius: 50%;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+footer { background: #343a40; color: white; padding: 2rem 1rem; text-align: center; margin-top: 2rem; } 
+
+footer p { margin: 0; font-size: 1rem; 
+    text-align: center; /* Esto centrará el texto */
+}
+
+.cta-button-container { display: flex; justify-content: center; } 
+.cta-button { display: inline-block; margin-top: 2rem; padding: 15px 30px; font-size: 18px; color: #fff; background-color: #007BFF; border: none; border-radius: 5px; text-decoration: none; transition: background-color 0.3s, transform 0.3s; } 
+.cta-button:hover { background-color: #0056b3; transform: scale(1.05); }
+
+
+  .contact-item {
+    display: flex;
+    align-items: center; /* Alinear elementos verticalmente */
+    justify-content: center; /* Centrar elementos horizontalmente */
+  }
+  
+  .whatsapp-icon {
+    width: 60px; /* Ajusta este valor según el tamaño que desees */
+    height: 60px; /* Asegúrate de que la proporción sea correcta */
+    margin-right: 10px; /* Espacio entre el icono y el texto */
+  }
+/* Contenedor principal */
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    padding: 20px;
+    background-color: transparent; /* Fondo transparente */
+    box-sizing: border-box;
+}
+
+/* Galería de fotos */
+.gallery {
+    display: flex; /* Coloca las imágenes en fila */
+    gap: 20px; /* Espacio entre imágenes */
+    justify-content: center; /* Centra las imágenes dentro de la galería */
+    flex-wrap: nowrap; /* Evita que las imágenes se envuelvan en filas */
+    width: auto; /* Ajusta el ancho dinámicamente según el contenido */
+}
+
+/* Contenedor de imagen */
+.image-container {
+    width: 80%; /* Incrementa el tamaño de las imágenes a 4 veces el tamaño original */
+    border: 2px solid #ccc;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Imágenes dentro del contenedor */
+.image-container img {
+    width: 100%;
+    height: 600px; /* Incrementa la altura proporcionalmente */
+    object-fit: cover; /* Asegura que la imagen se ajuste proporcionalmente */
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efecto hover sobre las imágenes */
+.image-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .gallery {
+        flex-wrap: wrap; /* Permite que las imágenes envuelvan en filas */
+    }
+
+    .image-container {
+        width: 100%; /* Ajusta el ancho en pantallas pequeñas */
+    }
+
+    .image-container img {
+        height: auto; /* Permite ajustar dinámicamente en pantallas pequeñas */
+    }
+}
+.nav-menu {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    margin: 1rem 0;
+    background-color: #343a40;  /* Fondo oscuro */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas si es necesario */
+}
+
+.nav-menu li {
+    margin: 0 1rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #f8f9fa;  /* Color claro para texto */
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    padding: 0.7rem 1.2rem;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    border-radius: 5px;
+    background-color: transparent;
+}
+
+.nav-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);  /* Fondo sutil en hover */
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .nav-menu {
+        flex-direction: row; /* Mantener una fila */
+        justify-content: center; /* Centrar los elementos */
+        align-items: center;
+        padding: 1rem;
+        margin: 1rem 0;
+        flex-wrap: nowrap; /* Evitar que los elementos se acomoden en varias filas */
+    }
+
+    .nav-menu li {
+        margin: 0.5rem;
+    }
+
+    .nav-menu a {
+        width: auto; /* Permite que los elementos se ajusten al contenido */
+        text-align: center;
+    }
+}
+
+.header-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrado del icono y texto */
+    justify-content: flex-start;
+    text-align: center; /* Centrado de todo el contenido dentro del header */
+    margin-top: 20px;
+}
+
+.header-icon {
+    width: 200px;  /* Ajustar el tamaño en móviles */
+    height: 200px; /* Ajustar el tamaño en móviles */
+    margin-bottom: 10px;  /* Espacio entre el ícono y el título */
+}
+
+header {
+    background: linear-gradient(to right, #343a40, #495057);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+}
+
+header h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;  /* Hacer el título más pequeño en pantallas pequeñas */
+    margin: 0;
+}
+
+header p {
+    font-size: 1.3rem; /* Hacer el texto del párrafo más pequeño */
+    margin-top: 0.5rem;
+    color: #adb5bd;
+    text-align: justify; /* Esto centrará el texto */
+}
+
+/* Diseño responsivo para pantallas muy pequeñas */
+@media (max-width: 480px) {
+    .header-icon {
+        width: 150px;  /* Ajustar el tamaño aún más pequeño */
+        height: 150px;
+    }
+
+    header h1 {
+        font-size: 2rem;  /* Reducir más el tamaño del título */
+    }
+
+    header p {
+        font-size: 1rem; /* Reducir más el tamaño del párrafo */
+        text-align: justify; /* Esto centrará el texto */
+    }
+}
